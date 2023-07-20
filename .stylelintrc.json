@@ -1,0 +1,345 @@
+{
+	"plugins": ["stylelint-order", "stylelint-prettier"],
+	"extends": [
+		"stylelint-config-standard-scss",
+		"stylelint-prettier/recommended"
+	],
+	"rules": {
+		"prettier/prettier": [
+			true,
+			{
+				"endOfLine": "auto"
+			}
+		],
+		"declaration-no-important": true,
+		"selector-id-pattern": "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+		"selector-class-pattern": "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+		"declaration-colon-space-after": "always-single-line",
+		"function-comma-space-after": "always",
+		"selector-list-comma-newline-after": "always",
+		"block-opening-brace-space-before": "always",
+		"string-quotes": "double",
+		"order/order": [
+			"custom-properties",
+			"dollar-variables",
+			"declarations",
+			"rules",
+			"at-rules"
+		],
+		"declaration-block-no-redundant-longhand-properties": [
+			true,
+			{ "ignoreShorthands": ["/grid/"] }
+		],
+		"order/properties-order": [
+			"position",
+			"z-index",
+
+			"inset",
+
+			"inset-inline",
+			"inset-block",
+
+			"inset-block-start",
+			"inset-inline-end",
+			"inset-block-end",
+			"inset-inline-start",
+
+			"left",
+			"top",
+			"right",
+			"bottom",
+
+			"display",
+
+			"overflow",
+			"overflow-x",
+			"overflow-y",
+			"overflow-inline",
+			"overflow-block",
+			"overflow-anchor",
+			"overflow-wrap",
+			"overflow-clip-margin",
+
+			"gap",
+
+			"grid-template",
+			"grid-template-rows",
+			"grid-template-columns",
+			"grid-template-areas",
+			"grid-auto-rows",
+			"grid-auto-columns",
+			"grid-auto-flow",
+			"grid-area",
+			"grid-row",
+			"grid-column",
+			"grid-row-start",
+			"grid-row-end",
+			"grid-column-start",
+			"grid-column-end",
+
+			"box-sizing",
+			"flex",
+			"flex-basis",
+			"flex-direction",
+			"flex-flow",
+			"flex-grow",
+			"flex-shrink",
+			"flex-wrap",
+
+			"place-content",
+			"place-items",
+			"place-self",
+			"justify-content",
+			"align-content",
+			"justify-items",
+			"align-items",
+			"justify-self",
+			"align-self",
+			"order",
+
+			"content",
+
+			"inline-size",
+			"width",
+			"max-inline-size",
+			"max-width",
+			"min-inline-size",
+			"min-width",
+
+			"block-size",
+			"height",
+			"max-block-size",
+			"max-height",
+			"min-block-size",
+			"min-height",
+
+			"padding",
+
+			"padding-inline",
+			"padding-block",
+
+			"padding-block-start",
+			"padding-inline-end",
+			"padding-block-end",
+			"padding-inline-start",
+
+			"padding-top",
+			"padding-right",
+			"padding-bottom",
+			"padding-left",
+
+			"border",
+
+			"border-inline",
+			"border-block",
+
+			"border-block-start",
+			"border-inline-end",
+			"border-block-end",
+			"border-inline-start",
+
+			"border-top",
+			"border-left",
+			"border-bottom",
+			"border-right",
+
+			"border-width",
+
+			"border-inline-width",
+			"border-block-width",
+
+			"border-block-start-width",
+			"border-inline-end-width",
+			"border-block-end-width",
+			"border-inline-start-width",
+
+			"border-top-width",
+			"border-right-width",
+			"border-bottom-width",
+			"border-left-width",
+
+			"border-style",
+
+			"border-inline-style",
+			"border-block-style",
+
+			"border-block-start-style",
+			"border-inline-end-style",
+			"border-block-end-style",
+			"border-inline-start-style",
+
+			"border-top-style",
+			"border-right-style",
+			"border-bottom-style",
+			"border-left-style",
+
+			"border-color",
+
+			"border-top-color",
+			"border-right-color",
+			"border-bottom-color",
+			"border-left-color",
+
+			"border-inline-color",
+			"border-block-color",
+
+			"border-block-start-color",
+			"border-inline-end-color",
+			"border-block-end-color",
+			"border-inline-start-color",
+
+			"border-radius",
+
+			"border-top-left-radius",
+			"border-top-right-radius",
+			"border-bottom-right-radius",
+			"border-bottom-left-radius",
+
+			"border-start-start-radius",
+			"border-start-end-radius",
+			"border-end-start-radius",
+			"border-end-end-radius",
+
+			"border-collapse",
+			"border-spacing",
+
+			"border-image",
+			"border-image-outset",
+			"border-image-repeat",
+			"border-image-slice",
+			"border-image-source",
+			"border-image-width",
+
+			"margin",
+
+			"margin-inline",
+			"margin-block",
+
+			"margin-block-start",
+			"margin-inline-end",
+			"margin-block-end",
+			"margin-inline-start",
+
+			"margin-top",
+			"margin-left",
+			"margin-bottom",
+			"margin-right",
+
+			"margin-trim",
+
+			"background",
+			"background-image",
+			"background-color",
+			"background-position",
+			"background-repeat",
+			"background-size",
+			"background-clip",
+			"background-attachment",
+			"background-position-x",
+			"background-position-y",
+			"background-origin",
+			"background-blend-mode",
+
+			"font-family",
+			"src",
+			"font-size",
+			"font-weight",
+			"font-style",
+			"font-display",
+			"font-variant",
+			"font-feature-settings",
+			"font-stretch",
+			"font-variant-ligatures",
+			"font-variant-numeric",
+			"font-kerning",
+			"font-language-override",
+			"font-optical-sizing",
+			"font-size-adjust",
+			"font-synthesis",
+			"font-variant-alternates",
+			"font-variant-caps",
+			"font-variant-east-asian",
+			"font-variant-position",
+			"font-variation-settings",
+			"writing-mode",
+			"direction",
+			"color",
+			"fill",
+
+			"text-orientation",
+			"text-justify",
+			"text-align",
+			"text-decoration",
+			"text-decoration-line",
+			"text-decoration-color",
+			"text-decoration-skip",
+			"text-decoration-style",
+			"text-decoration-skip-ink",
+			"text-decoration-thickness",
+			"text-transform",
+			"text-overflow",
+			"text-shadow",
+			"text-rendering",
+			"text-indent",
+			"text-size-adjust",
+			"text-align-last",
+			"text-anchor",
+			"text-combine-upright",
+			"text-emphasis",
+			"text-emphasis-color",
+			"text-emphasis-position",
+			"text-emphasis-style",
+			"text-combine-upright",
+			"text-underline-offset",
+			"text-underline-position",
+
+			"vertical-align",
+
+			"shadow-box",
+
+			"scroll-behavior",
+			"opacity",
+
+			"transition",
+			"transition-property",
+			"transition-duration",
+			"transition-timing-function",
+			"transition-delay",
+
+			"transform",
+			"transform-origin",
+			"transform-style",
+			"transform-box",
+			"perspective",
+			"perspective-origin",
+			"backface-visibility",
+
+			"animation",
+			"animation-name",
+			"animation-duration",
+			"animation-timing-function",
+			"animation-delay",
+			"animation-iteration-count",
+			"animation-direction",
+			"animation-fill-mode",
+			"animation-play-state",
+			"animation-composition",
+			"animation-timeline",
+
+			"cursor"
+		],
+		"unit-allowed-list": [
+			"vh",
+			"vw",
+			"px",
+			"%",
+			"fr",
+			"rem",
+			"em",
+			"deg",
+			"s",
+			"ms"
+		],
+		"scss/dollar-variable-pattern": "^^_?[a-z0-9]+(-[a-z0-9]+)*$"
+	}
+}

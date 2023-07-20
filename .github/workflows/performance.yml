@@ -1,0 +1,22 @@
+name: 📈 Performance check
+on: [push]
+jobs:
+    lighthouseci:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 👍 Checkout
+              uses: actions/checkout@v3
+
+            - name: 👍 Checkout Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: 📥 Install Dependecies
+              run: npm install && npm install -g @lhci/cli@0.11.x
+
+            - name: 🏗️ Build App
+              run: npm run build
+
+            - name: 🚨 Run Lighthouse
+              run: lhci autorun

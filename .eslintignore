@@ -1,0 +1,4 @@
+/dist/*
+/build/*
+/src/utils/particles.js
+/src/utils/analytics.js
