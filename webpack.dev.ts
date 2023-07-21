@@ -10,7 +10,13 @@ const config: Configuration = {
 	mode: 'development',
 	devtool: 'source-map',
 	devServer: {
-		static: path.join(__dirname, 'build'),
+		static: [
+			path.join(__dirname, 'build'),
+			{
+				directory: path.join(__dirname, 'images/'),
+				publicPath: '/images',
+			},
+		],
 		compress: true,
 		port: 8080,
 		historyApiFallback: true,

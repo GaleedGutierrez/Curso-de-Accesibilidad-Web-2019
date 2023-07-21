@@ -1,0 +1,22 @@
+@mixin center-flex($direction: row) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin all-center-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin margin-block-1p6rem {
+	margin-inline-end: 1.6rem;
+	margin-inline-start: 1.6rem;
+}
+
+@mixin limit-width-desktop {
+	max-width: 1024px;
+	margin-inline: auto;
+}

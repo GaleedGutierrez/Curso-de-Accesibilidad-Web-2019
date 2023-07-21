@@ -38,7 +38,7 @@ const common: Configuration = {
 				},
 			},
 			{
-				test: /\.(png|jpg|jpeg|gif|webp|ico|svg|avif|webp)$/i,
+				test: /\.(png|jpg|jpeg|gif|webp|ico|svg|avif|webp|jxl)$/i,
 				type: 'asset/resource',
 				generator: {
 					filename: 'assets/images/[name].[hash].[ext]',
