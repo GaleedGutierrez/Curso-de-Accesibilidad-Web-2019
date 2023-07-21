@@ -1,0 +1,53 @@
+/* stylelint-disable order/order */
+/* stylelint-disable custom-property-pattern */
+/* stylelint-disable declaration-colon-space-after */
+@use "../settings/variables";
+@use "../tools/functions";
+
+:root {
+	--ON: initial;
+	--OFF: ;
+
+	// Light theme is on by default
+	--light: var(--ON);
+	--dark: var(--OFF);
+
+	//  Dark theme is off by default
+	&.dark-theme {
+		--light: var(--OFF);
+		--dark: var(--ON);
+	}
+
+	//  If user prefers dark, then that's what they'll get
+	@media (prefers-color-scheme: dark) {
+		--light: var(--OFF);
+		--dark: var(--ON);
+
+		&.light-theme {
+			--light: var(--ON);
+			--dark: var(--OFF);
+		}
+	}
+
+	// Set colors
+	--background-color: #{functions.light-dark(
+			variables.$background-lightest-color,
+			variables.$background-dark-color
+		)};
+	--text-color: #{functions.light-dark(
+			variables.$text-color,
+			variables.$text-color-white
+		)};
+	--icon-color: #{functions.light-dark(
+			variables.$text-color,
+			variables.$text-color-white
+		)};
+	--icon-hover: #{functions.light-dark(
+			variables.$light-gray-200,
+			variables.$light-gray-400
+		)};
+	--icon-active-color: #{functions.light-dark(
+			variables.$text-color-white,
+			variables.$text-color
+		)};
+}
