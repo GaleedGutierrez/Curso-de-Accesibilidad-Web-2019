@@ -1,4 +1,4 @@
-import "../styles/styles.scss";
+import "../styles//original-styles.scss";
 
 /** Esta función se llama cuando la persona hace click en el botón de enviar del formulario de contacto */
 function showNotification() {
