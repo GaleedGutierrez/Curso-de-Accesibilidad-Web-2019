@@ -75,16 +75,17 @@
 			<section>
 				<h2 class="header">Mis proyectos</h2>
 				<div class="carousel">
-					<button class="arrow arrow-left"></button>
+					<button class="arrow arrow-left" aria-label="Ver proyectos más recientes"></button>
 					<div class="window">
 						<ul class="project-container">
 							<li>
 								<button>
-								</button>	<img
+									<img
 										class="project project1"
 										src="../images/project1.png"
 										alt="Mi primer proyecto"
 									/>
+								</button>
 								</button>
 							</li>
 							<li>
@@ -125,19 +126,26 @@
 							</li>
 						</ul>
 					</div>
-					<button class="arrow arrow-right"></button>
+					<button class="arrow arrow-right" aria-label="Ver proyectos más antiguos"></button>
 				</div>
 			</section>
 		</main>
 
 		<footer class="contact-section">
 			<h2 class="header">Contacto</h2>
-			<form class="form-container">
-				Nombre<input type="text" /> <br />
-				Correo<input type="text" /> <br />
-				<div class="message-input">
-					Mensaje<input type="text" /> <br />
-				</div>
+			<form class="form-container" action="">
+				<label for="name">
+					<span>Nombre</span>
+					<input type="text" name="name" id="name" autocomplete="name"/>
+				</label>
+				<label for="email">
+					<span>Correo</span>
+					<input type="email" name="email" id="email" autocomplete="email"/>
+				</label>
+				<label class="message-input" for="message">
+					<span>Mensaje</span>
+					<input type="text" name="message" id="message"/>
+				</label>
 				<button class="send-button">Enviar</button>
 			</form>
 		</footer>
