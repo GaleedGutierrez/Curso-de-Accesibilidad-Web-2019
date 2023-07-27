@@ -1,0 +1,42 @@
+@use "../../settings/variables";
+@use "../../tools/mixins";
+
+.m-modal-container {
+	position: fixed;
+	/* stylelint-disable-next-line declaration-no-important */
+	display: none !important;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(000 000 000 / 20%);
+
+	@include mixins.center-flex;
+}
+
+.m-modal {
+	position: fixed;
+	top: 5%;
+	gap: variables.$space-4;
+	width: 95%;
+	max-width: 70rem;
+	padding: 2rem;
+	border: variables.$border-05 solid variables.$dark-gray;
+	border-radius: variables.$border-2;
+	background-color: variables.$background-dark-gray;
+
+	&__title {
+		text-align: center;
+
+		@include mixins.heading-2xl;
+	}
+
+	&__image {
+		border-radius: variables.$border-2;
+	}
+
+	&__button {
+		display: block;
+		margin-inline-start: auto;
+	}
+
+	@include mixins.center-flex(column);
+}

@@ -9,118 +9,181 @@
 			rel="stylesheet"
 		/>
 	</head>
-
 	<body>
-		<header>
+		<header class="g-header">
 			<img
 				src="images/juliana.jpeg"
 				alt="Juliana Gomez"
-				class="header-img"
+				class="g-header__hero header-img"
 			/>
-			<h1 class="header">Juliana Gomez</h1>
-			<h2 class="subtitle">Front End Developer</h2>
+			<h1 class="g-header__title">Juliana Gomez</h1>
+			<h2 class="g-header__subtitle">Front End Developer</h2>
 			<nav>
-				<ul class="navigation">
-					<li class="nav-item"><a href="#acerca-de">Acerca de</a></li>
-					<li class="nav-item">
-						<a href="#mis-projectos">Mis Proyectos</a>
+				<ul class="g-header__navigation">
+					<li>
+						<a class="g-header__link" href="#acerca-de"
+							>Acerca de</a
+						>
 					</li>
-					<li class="nav-item"><a href="#contacto">Contacto</a></li>
+					<li>
+						<a class="g-header__link" href="#mis-projectos"
+							>Mis Proyectos</a
+						>
+					</li>
+					<li>
+						<a class="g-header__link" href="#contacto">Contacto</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section>
-				<h2>Acerca de mi</h2>
-				<p class="intro">
-					Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y
-					también crear cosas lindas para la web 😍 Después de
-					estudiar comunicación social y ciencia política en la
-					universidad, trabajé varios años en mercadeo digital hasta
-					que aprendí a programar. Llevo un poco más de tres años
-					enfocándome en front end, específicamente en JavaScript y
-					accesibilidad. Sueño con una web donde todo el mundo pueda
-					participar. Aquí puedes ver algunos de mis proyectos
-					recientes y también puedes contactarme por si quieres hablar
-					de tecnología, accesibilidad o gatos!
-				</p>
-				<ul class="social-media">
+			<section class="g-about-me">
+				<h2 class="g-about-me__title">Acerca de mi</h2>
+				<div class="g-about-me__intro">
+					<p>
+						Hola! Soy Juliana
+						<span aria-hidden="true" tabindex="-1">👋</span> Soy
+						Colombo-Canadiense, amo los gatos y también crear cosas
+						lindas para la web
+						<span aria-hidden="true" tabindex="-1">😍</span> Después
+						de estudiar comunicación social y ciencia política en la
+						universidad, trabajé varios años en mercadeo digital
+						hasta que aprendí a programar. Llevo un poco más de tres
+						años enfocándome en front end, específicamente en
+						JavaScript y accesibilidad. Sueño con una web donde todo
+						el mundo pueda participar.
+					</p>
+					<p>
+						Aquí puedes ver algunos de mis proyectos recientes y
+						también puedes contactarme por si quieres hablar de
+						tecnología, accesibilidad o gatos!
+					</p>
+				</div>
+				<ul class="g-about-me__social-media">
 					<li>
-						<a href="https://twitter.com/gmzjuliana" target="_blank"
-							><img
-								src="images/twitter.png"
-								alt="Ir al twitter de Juliana Gomez"
-						/></a>
+						<a
+							href="https://twitter.com/gmzjuliana"
+							target="_blank"
+						>
+							<svg
+								class="a-social-media-icon"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+							>
+								<title>Ir al Twitter de Juliana Gomez</title>
+								<path
+									d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"
+								></path>
+							</svg>
+						</a>
 					</li>
 					<li>
 						<a href="https://github.com/gmzjuliana" target="_blank"
-							><img
-								src="images/github-logo.png"
-								alt="Ir al github de Juliana Gomez"
-						/></a>
+							><svg
+								class="a-social-media-icon"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+							>
+								<title>Ir al Github de Juliana Gomez</title>
+								<path
+									d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"
+								></path>
+							</svg>
+						</a>
 					</li>
 					<li>
 						<a
 							href="https://www.linkedin.com/in/gomezjuliana/"
 							target="_blank"
-							><img
-								src="images/linkedin.png"
-								alt="Ir al LinkedIn de Juliana Gomez"
-						/></a>
+							><svg
+								class="a-social-media-icon"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+							>
+								<title>Ir al LinkedIn de Juliana Gomez</title>
+								<path
+									d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"
+								></path>
+								<path d="M2 12h6v18h-6v-18z"></path>
+								<path
+									d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"
+								></path>
+							</svg>
+						</a>
 					</li>
 				</ul>
 			</section>
 
-			<section>
-				<h2 class="header">Mis proyectos</h2>
-				<div class="carousel">
+			<section class="g-portfolio">
+				<h2 class="g-portfolio__title">Mis proyectos</h2>
+				<div class="g-portfolio__carousel">
 					<button
-						class="arrow arrow-left"
+						class="a-arrow-button g-portfolio__button-left"
 						aria-label="Ver proyectos más recientes"
-					></button>
-					<div class="window">
-						<ul class="project-container">
-							<li>
+					>
+						<svg
+							class="a-arrow-button__left"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 69.8 79.98"
+						>
+							<path
+								d="m1.02,41.75l65.73,37.95c1.36.78,3.06-.2,3.06-1.76V2.04c0-1.57-1.7-2.55-3.06-1.76L1.02,38.22c-1.36.78-1.36,2.75,0,3.53Z"
+								style="fill: #7fbc47"
+							/>
+						</svg>
+					</button>
+					<div class="g-portfolio__window">
+						<ul class="g-portfolio__project-container">
+							<li class="g-portfolio__project">
 								<button>
 									<img
-										class="project project1"
+										class="g-portfolio__img project project1"
 										src="../images/project1.png"
 										alt="Mi primer proyecto"
 									/>
 								</button>
 							</li>
-							<li>
+							<li class="g-portfolio__project">
 								<button>
 									<img
-										class="project project2"
+										class="g-portfolio__img project project2"
 										src="../images/project2.png"
 										alt="Mi segundo proyecto"
 									/>
 								</button>
 							</li>
-							<li>
+							<li class="g-portfolio__project">
 								<button>
 									<img
-										class="project project3"
+										class="g-portfolio__img project project3"
 										src="../images/project3.png"
 										alt="Mi tercer proyecto"
 									/>
 								</button>
 							</li>
-							<li aria-hidden="true">
+							<li class="g-portfolio__project" aria-hidden="true">
 								<button>
 									<img
-										class="project project4"
+										class="g-portfolio__img project project4"
 										src="../images/project4.png"
 										alt="Mi cuarto proyecto"
 									/>
 								</button>
 							</li>
-							<li aria-hidden="true">
+							<li class="g-portfolio__project" aria-hidden="true">
 								<button>
 									<img
-										class="project project5"
+										class="g-portfolio__img project project5"
 										src="../images/project5.png"
 										alt="Mi quinto proyecto"
 									/>
@@ -129,46 +192,80 @@
 						</ul>
 					</div>
 					<button
-						class="arrow arrow-right"
+						class="a-arrow-button g-portfolio__button-right"
 						aria-label="Ver proyectos más antiguos"
-					></button>
+					>
+						<svg
+							class="a-arrow-button__right"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 69.8 79.98"
+						>
+							<path
+								d="m68.79,38.22L3.06.28C1.7-.51,0,.47,0,2.04v75.9c0,1.57,1.7,2.55,3.06,1.76l65.73-37.95c1.36-.78,1.36-2.75,0-3.53Z"
+								style="fill: #7fbc47"
+							/>
+						</svg>
+					</button>
 				</div>
 			</section>
 		</main>
 
-		<footer class="contact-section">
-			<h2 class="header">Contacto</h2>
-			<form class="form-container" action="">
+		<footer class="g-contact">
+			<h2 class="g-contact__title">Contacto</h2>
+			<form class="g-contact__form-container" action="">
 				<label for="name">
-					<span>Nombre</span>
+					<p>Nombre</p>
 					<input
+						class="g-contact__input"
 						type="text"
 						name="name"
 						id="name"
 						autocomplete="name"
+						placeholder="Mi nombre"
+						required
 					/>
 				</label>
 				<label for="email">
-					<span>Correo</span>
+					<p>Correo</p>
 					<input
+						class="g-contact__input"
 						type="email"
 						name="email"
 						id="email"
 						autocomplete="email"
+						placeholder="ejemplo@email.com"
+						required
 					/>
 				</label>
 				<label class="message-input" for="message">
-					<span>Mensaje</span>
-					<input type="text" name="message" id="message" />
+					<p>Mensaje</p>
+					<textarea
+						class="g-contact__input g-contact__input-message"
+						type="text"
+						name="message"
+						id="message"
+						placeholder="¡Hola, trabajemos juntos!"
+						required
+					></textarea>
 				</label>
-				<button class="send-button">Enviar</button>
+				<input
+					type="submit"
+					class="a-button g-contact__send-button"
+					placeholder="Enviar"
+				/>
 			</form>
 		</footer>
-		<div class="notification">El formulario fue enviado sin errores</div>
-		<div class="modal-container">
-			<div class="modal">
-				Ejemplo de un proyecto mio
-				<div class="modal-project-image"></div>
+		<div class="a-notification">El formulario fue enviado sin errores</div>
+		<div class="m-modal-container">
+			<div class="m-modal">
+				<h2 class="m-modal__title">Ejemplo de un proyecto mio</h2>
+				<!-- <div class="modal-project-image"></div> -->
+				<img
+					src="/images/project1.png"
+					class="m-modal__image"
+					alt="Un pantallazo de mi project"
+				/>
+				<button class="a-button m-modal__button">Cerrar</button>
 			</div>
 		</div>
 	</body>
