@@ -1,67 +1,18 @@
 @use "../settings/variables";
-@use "../tools/functions";
-
-%a-button-base {
-	padding-inline: variables.$space-6;
-	padding-block: variables.$space-4;
-	border-width: variables.$border-05;
-	border-style: solid;
-	border-radius: variables.$border-radius-3;
-	background-color: transparent;
-	cursor: pointer;
-}
 
 .a-button {
-	--border-color: #{functions.light-dark(
-			variables.$background-dark-color,
-			variables.$background-lighter-gray-color
-		)};
-	--hover-color: #{functions.light-dark(
-			variables.$background-lightest-gray-color,
-			variables.$background-light-gray-color
-		)};
-	--active-color: #{functions.light-dark(
-			variables.$background-dark-color,
-			variables.$background-lighter-gray-color
-		)};
-	--text-hover-color: #{functions.light-dark(
-			variables.$text-color-pure-white,
-			variables.$text-color
-		)};
-
-	border-color: var(--border-color);
-	color: var(--text-color);
+	padding-inline: variables.$space-12;
+	padding-block: variables.$space-4;
+	border: none;
+	border-radius: variables.$border-2;
+	background-color: variables.$background-green;
 
 	&:hover {
-		border-color: var(--hover-color);
-		background-color: var(--hover-color);
-		color: var(--text-hover-color);
-	}
-
-	&:focus {
-		border-color: var(--active-color);
-		background-color: var(--active-color);
-		color: var(--text-hover-color);
-	}
-
-	@extend %a-button-base;
-}
-
-.a-button--unique {
-	border-color: variables.$background-dark-color;
-	color: variables.$text-color;
-
-	&:hover {
-		border-color: variables.$background-lightest-gray-color;
-		background-color: variables.$background-lightest-gray-color;
-		color: variables.$text-color-white;
+		background-color: rgba(variables.$green, 80%);
 	}
 
 	&:active {
-		border-color: variables.$background-dark-color;
-		background-color: variables.$background-dark-color;
-		color: variables.$text-color-white;
+		background-color: rgba(variables.$green, 40%);
+		color: variables.$text-color;
 	}
-
-	@extend %a-button-base;
 }

@@ -1,0 +1,40 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+%arrow {
+	position: absolute;
+	top: calc(50% - 1.719rem);
+	width: 3rem;
+}
+
+.a-arrow-button {
+	position: relative;
+	width: 7.5rem;
+	height: 7.5rem;
+	border: variables.$border-025 solid variables.$pure-white;
+	border-radius: 50%;
+	background-color: variables.$background-dark-gray;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		background-color: rgba(variables.$background-white, 20%);
+	}
+
+	&:active {
+		background-color: variables.$background-white;
+	}
+
+	&__left {
+		left: calc(50% - 1.8rem);
+
+		@extend %arrow;
+	}
+
+	&__right {
+		left: calc(50% - 1.2rem);
+
+		@extend %arrow;
+	}
+
+	@include mixins.center-flex;
+}

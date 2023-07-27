@@ -17,13 +17,22 @@
 
 // Objects
 // @use "./objects/scroll-margin";
-// @use "./objects/container";
+@use "./objects/container";
 
 // Utilities
 // @use "./utilities/animation";
 
 // Atoms
+@use "./atoms/social-media-icon";
+@use "./atoms/arrow";
+@use "./atoms/notification";
+@use "./atoms/buttons";
 
 // Molecules
+@use "./molecules/modal/modal";
 
 // Organisms
+@use "./organisms/header/header";
+@use "./organisms/about-me/about-me";
+@use "./organisms/portfolio/portfolio";
+@use "./organisms/contact/contact";
