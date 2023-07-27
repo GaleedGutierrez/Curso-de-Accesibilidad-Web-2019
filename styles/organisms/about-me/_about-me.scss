@@ -15,6 +15,10 @@
 		margin-block: variables.$space-4 variables.$space-8;
 	}
 
+	&__nav-item {
+		text-align: center;
+	}
+
 	&__social-media {
 		gap: variables.$space-5;
 
