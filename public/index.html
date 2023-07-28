@@ -10,6 +10,23 @@
 		/>
 	</head>
 	<body>
+		<ul>
+			<li>
+				<a class="skip-link" href="#main"
+					>Saltar al contenido principal</a
+				>
+			</li>
+			<li>
+				<a class="skip-link" href="#projects"
+					>Saltar al la sección de proyectos</a
+				>
+			</li>
+			<li>
+				<a class="skip-link" href="#contact"
+					>Saltar al la sección de contacto</a
+				>
+			</li>
+		</ul>
 		<header class="g-header">
 			<img
 				src="images/juliana.jpeg"
@@ -37,7 +54,7 @@
 			</nav>
 		</header>
 
-		<main>
+		<main id="main">
 			<section class="g-about-me">
 				<h2 class="g-about-me__title">Acerca de mi</h2>
 				<div class="g-about-me__intro">
@@ -127,7 +144,7 @@
 				</ul>
 			</section>
 
-			<section class="g-portfolio">
+			<section class="g-portfolio" id="projects">
 				<h2 class="g-portfolio__title">Mis proyectos</h2>
 				<div class="g-portfolio__carousel">
 					<button
@@ -213,7 +230,7 @@
 			</section>
 		</main>
 
-		<footer class="g-contact">
+		<footer id="contact" class="g-contact">
 			<h2 class="g-contact__title">Contacto</h2>
 			<form class="g-contact__form-container" action="">
 				<label for="name">
