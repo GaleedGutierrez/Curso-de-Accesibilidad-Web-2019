@@ -6,8 +6,8 @@
 	text-align: center;
 
 	&__hero {
-		width: 30rem;
-		height: 30rem;
+		width: 90%;
+		max-width: 30rem;
 		border: variables.$border-025 solid variables.$dark-gray;
 		border-radius: variables.$border-radius-circle;
 		box-shadow: 8px 16px 32px 0 variables.$shadow;
@@ -36,7 +36,12 @@
 		padding-block: variables.$space-1;
 		border-radius: variables.$border-1;
 
-		&:hover {
+		&:focus {
+			outline: none;
+		}
+
+		&:hover,
+		&:focus {
 			background-color: variables.$green;
 			color: variables.$text-color-dark;
 		}

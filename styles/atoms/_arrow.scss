@@ -24,6 +24,10 @@
 		background-color: variables.$background-white;
 	}
 
+	&:focus {
+		@include mixins.focus-button;
+	}
+
 	&__left {
 		left: calc(50% - 1.8rem);
 
