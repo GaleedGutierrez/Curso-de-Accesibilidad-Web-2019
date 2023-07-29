@@ -1,4 +1,5 @@
 @use "../../settings/variables";
+@use "../../tools/mixins";
 
 .g-portfolio {
 	margin-block-end: variables.$space-10;
@@ -25,13 +26,19 @@
 		order: 0;
 
 		// width: 815px;
-		// padding: 8px;
+		padding: variables.$space-2;
 	}
 
 	&__project-container {
-		overflow-x: scroll;
+		// overflow-x: scroll;
 		width: 1500px;
-		padding-inline: variables.$space-5;
+		padding: variables.$space-5;
+	}
+
+	&__button-project {
+		&:focus-within {
+			@include mixins.focus-anchor;
+		}
 	}
 
 	&__project {

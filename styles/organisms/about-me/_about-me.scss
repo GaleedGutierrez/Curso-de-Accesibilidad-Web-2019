@@ -17,6 +17,14 @@
 
 	&__nav-item {
 		text-align: center;
+
+		&:focus-within {
+			@include mixins.focus-anchor;
+		}
+	}
+
+	&__nav-link {
+		outline: none;
 	}
 
 	&__social-media {

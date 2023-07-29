@@ -20,7 +20,7 @@
 		margin-block: variables.$space-2 variables.$space-5;
 
 		&:focus {
-			outline: variables.$border-1 solid variables.$green;
+			@include mixins.focus-input;
 		}
 	}
 
