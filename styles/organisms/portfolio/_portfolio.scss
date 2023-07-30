@@ -25,14 +25,18 @@
 		grid-area: img;
 		order: 0;
 
-		// width: 815px;
-		padding: variables.$space-2;
+		// max-width: 815px;
+		padding: variables.$space-4;
 	}
 
 	&__project-container {
+		// display: flex;
+		// gap: variables.$space-5;
+
 		// overflow-x: scroll;
 		width: 1500px;
-		padding: variables.$space-5;
+
+		// padding: variables.$space-5;
 	}
 
 	&__button-project {

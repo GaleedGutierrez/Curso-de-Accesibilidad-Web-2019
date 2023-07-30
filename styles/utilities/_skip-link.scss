@@ -15,7 +15,7 @@
 	transition: transform variables.$time-001;
 	transform: translateY(-200%);
 
-	&:focus {
+	&:focus-visible {
 		transform: translateY(0%);
 
 		@include mixins.focus-skip-link;

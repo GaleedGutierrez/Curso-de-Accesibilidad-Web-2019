@@ -1,0 +1,24 @@
+@use "../../settings/variables";
+@use "../../tools/mixins";
+
+.g-portfolio {
+	&__window {
+		max-width: 815px;
+	}
+
+	&__carousel {
+		overflow: hidden;
+		gap: variables.$space-1;
+
+		@include mixins.center-flex;
+	}
+
+	&__project-container {
+		display: flex;
+		gap: variables.$space-5;
+	}
+
+	&__project {
+		display: initial;
+	}
+}

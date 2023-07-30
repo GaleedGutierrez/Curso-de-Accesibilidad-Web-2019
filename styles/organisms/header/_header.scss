@@ -36,12 +36,12 @@
 		padding-block: variables.$space-1;
 		border-radius: variables.$border-1;
 
-		&:focus {
+		&:focus-visible {
 			outline: none;
 		}
 
 		&:hover,
-		&:focus {
+		&:focus-visible {
 			background-color: variables.$green;
 			color: variables.$text-color-dark;
 		}

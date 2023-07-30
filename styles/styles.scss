@@ -36,3 +36,8 @@
 @use "./organisms/about-me/about-me";
 @use "./organisms/portfolio/portfolio";
 @use "./organisms/contact/contact";
+
+@media screen and (width >= 1024px) {
+	/* stylelint-disable-next-line no-invalid-position-at-import-rule */
+	@import "./desktop";
+}
