@@ -5,6 +5,11 @@
 	margin-inline: auto;
 }
 
+.o-container-medium {
+	max-width: variables.$max-width-element-2;
+	margin-inline: auto;
+}
+
 .o-container-gral {
 	display: flex;
 	flex-direction: column;

@@ -12,7 +12,7 @@
 		background-color: rgba(variables.$green, 80%);
 	}
 
-	&:focus {
+	&:focus-visible {
 		@include mixins.focus-button;
 	}
 

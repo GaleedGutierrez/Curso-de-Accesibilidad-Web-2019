@@ -24,7 +24,7 @@
 		background-color: variables.$background-white;
 	}
 
-	&:focus {
+	&:focus-visible {
 		@include mixins.focus-button;
 	}
 
