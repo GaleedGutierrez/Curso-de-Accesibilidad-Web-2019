@@ -22,24 +22,29 @@
 
 	&__window {
 		overflow: hidden;
+
+		// overflow-x: scroll;
 		grid-area: img;
 		order: 0;
 
 		// max-width: 815px;
 		padding: variables.$space-4;
+
+		// overscroll-behavior-x: contain;
+		// scroll-snap-type: x proximity;
 	}
 
 	&__project-container {
-		// display: flex;
-		// gap: variables.$space-5;
-
-		// overflow-x: scroll;
+		display: flex;
+		gap: variables.$space-5;
 		width: 1500px;
 
 		// padding: variables.$space-5;
 	}
 
 	&__button-project {
+		scroll-snap-align: center;
+
 		&:focus-within {
 			@include mixins.focus-anchor;
 		}
