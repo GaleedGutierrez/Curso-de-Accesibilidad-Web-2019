@@ -5,7 +5,7 @@ import { Configuration } from 'webpack';
 
 const common: Configuration = {
 	target: 'web',
-	entry: './src/index.js',
+	entry: './src/index.ts',
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.[contenthash].js',

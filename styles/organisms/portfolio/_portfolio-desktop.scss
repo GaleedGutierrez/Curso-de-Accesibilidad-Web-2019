@@ -13,10 +13,10 @@
 		@include mixins.center-flex;
 	}
 
-	&__project-container {
-		display: flex;
-		gap: variables.$space-5;
-	}
+	// &__project-container {
+	// 	display: flex;
+	// 	gap: variables.$space-5;
+	// }
 
 	&__project {
 		display: initial;

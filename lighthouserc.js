@@ -1,7 +1,7 @@
 module.exports = {
 	ci: {
 		assert: {
-			preset: "lighthouse:no-pwa",
+			preset: 'lighthouse:no-pwa',
 			assertions: {
 				// Performance related
 				// "unused-javascript": "warn",
