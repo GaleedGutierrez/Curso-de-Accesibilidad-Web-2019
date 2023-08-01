@@ -301,14 +301,9 @@
 			</form>
 		</footer>
 		<div class="a-notification">El formulario fue enviado sin errores</div>
-		<div
-			id="modal-container"
-			class="m-modal-container"
-			role="dialog"
-			aria-labelledby="dialog1Title"
-		>
+		<dialog id="modal-container" class="m-modal-container">
 			<div class="m-modal">
-				<h2 id="dialog1Title" class="m-modal__title">
+				<h2 id="modal-title" class="m-modal__title">
 					Ejemplo de un proyecto mio
 				</h2>
 				<!-- <div class="modal-project-image"></div> -->
@@ -317,13 +312,13 @@
 						id="image-modal"
 						src="/images/project1.png"
 						class="m-modal__image"
-						alt="Un pantallazo de mi project"
+						alt="Un pantallazo de mi proyecto"
 					/>
 				</figure>
 				<button id="modal-close" class="a-button m-modal__button">
 					Cerrar
 				</button>
 			</div>
-		</div>
+		</dialog>
 	</body>
 </html>

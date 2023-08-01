@@ -8,6 +8,7 @@ export const PROJECT_CONTAINER = $('#project-container') as HTMLUListElement;
 export const PROJECTS = Array.from(
 	$$('.g-portfolio__button-project'),
 ) as HTMLButtonElement[];
-export const MODAL_CONTAINER = $('#modal-container') as HTMLDivElement;
+export const MODAL_CONTAINER = $('#modal-container') as HTMLDialogElement;
 export const MODAL_CLOSE = $('#modal-close') as HTMLButtonElement;
 export const IMAGE_MODAL = $('#image-modal') as HTMLImageElement;
+export const MODAL_TITLE = $('#modal-title') as HTMLHeadingElement;
