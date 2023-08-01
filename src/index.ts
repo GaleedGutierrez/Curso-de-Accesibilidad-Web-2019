@@ -7,6 +7,7 @@ import {
 	IMAGE_MODAL,
 	MODAL_CLOSE,
 	MODAL_CONTAINER,
+	MODAL_TITLE,
 	PROJECT_CONTAINER,
 	PROJECTS,
 } from './utils/nodes';
@@ -28,19 +29,24 @@ function openModal(event: Event) {
 		: (TARGET as HTMLImageElement);
 
 	IMAGE_MODAL.src = IMAGE.src;
-	IMAGE_MODAL.alt = IMAGE.alt;
+	MODAL_TITLE.innerText = IMAGE.alt;
 	MODAL_CONTAINER.classList.add('is-visible-flex');
+	MODAL_CONTAINER.open = true;
+	MODAL_CONTAINER.focus();
 }
 
 function closeModal(event: Event) {
 	const TARGET = event.target as HTMLElement;
 	const CLASS_NAME = TARGET.className;
 	const IS_MODAL =
-		CLASS_NAME.includes('modal') || CLASS_NAME.includes('project');
+		CLASS_NAME.includes('project') ||
+		(CLASS_NAME.includes('modal') &&
+			!CLASS_NAME.includes('m-modal-container'));
 	const IS_BUTTON = TARGET.nodeName === 'BUTTON';
 
 	if (IS_MODAL && !IS_BUTTON) return;
 
+	MODAL_CONTAINER.close();
 	MODAL_CONTAINER.classList.remove('is-visible-flex');
 }
 
@@ -107,5 +113,5 @@ PROJECTS.forEach((project) => {
 BUTTON_LEFT.addEventListener('click', clickLeft);
 BUTTON_RIGHT.addEventListener('click', clickRight);
 MODAL_CLOSE.addEventListener('click', closeModal);
-globalThis.addEventListener('click', closeModal);
+MODAL_CONTAINER.addEventListener('click', closeModal);
 globalThis.addEventListener('keydown', listenToEsc);
