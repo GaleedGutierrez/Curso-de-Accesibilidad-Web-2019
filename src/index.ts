@@ -53,7 +53,7 @@ function clickLeft() {
 	PROJECT_CONTAINER.style.transform = `translateX(${NEW_VALUE}rem)`;
 }
 
-const OBSERVER = new IntersectionObserver(updateAria, { threshold: 1.0 });
+const OBSERVER = new IntersectionObserver(updateAria, { threshold: 0.9 });
 
 PROJECTS.forEach((project) => {
 	OBSERVER.observe(project);

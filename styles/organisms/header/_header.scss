@@ -5,6 +5,10 @@
 	padding-block-start: variables.$space-10;
 	text-align: center;
 
+	&__figure-hero {
+		justify-content: center;
+	}
+
 	&__hero {
 		width: 90%;
 		max-width: 30rem;
