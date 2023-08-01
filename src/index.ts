@@ -4,9 +4,53 @@ import '../styles/styles.scss';
 import {
 	BUTTON_LEFT,
 	BUTTON_RIGHT,
+	IMAGE_MODAL,
+	MODAL_CLOSE,
+	MODAL_CONTAINER,
 	PROJECT_CONTAINER,
 	PROJECTS,
 } from './utils/nodes';
+
+function openModal(event: Event) {
+	if (
+		(event as KeyboardEvent).code !== 'Enter' &&
+		(event as KeyboardEvent).code !== undefined
+	) {
+		return;
+	}
+
+	event.stopPropagation();
+
+	const TARGET = event.target as HTMLElement;
+	const IS_BUTTON = TARGET.nodeName === 'BUTTON';
+	const IMAGE = IS_BUTTON
+		? (TARGET.parentElement?.querySelector('img') as HTMLImageElement)
+		: (TARGET as HTMLImageElement);
+
+	IMAGE_MODAL.src = IMAGE.src;
+	IMAGE_MODAL.alt = IMAGE.alt;
+	MODAL_CONTAINER.classList.add('is-visible-flex');
+}
+
+function closeModal(event: Event) {
+	const TARGET = event.target as HTMLElement;
+	const CLASS_NAME = TARGET.className;
+	const IS_MODAL =
+		CLASS_NAME.includes('modal') || CLASS_NAME.includes('project');
+	const IS_BUTTON = TARGET.nodeName === 'BUTTON';
+
+	if (IS_MODAL && !IS_BUTTON) return;
+
+	MODAL_CONTAINER.classList.remove('is-visible-flex');
+}
+
+function listenToEsc(event: KeyboardEvent) {
+	const ESCAPE_KEY = 'Escape';
+
+	if (event.code === ESCAPE_KEY) {
+		closeModal(event);
+	}
+}
 
 function updateAria(entries: IntersectionObserverEntry[]) {
 	entries.forEach((entry) => {
@@ -53,52 +97,15 @@ function clickLeft() {
 	PROJECT_CONTAINER.style.transform = `translateX(${NEW_VALUE}rem)`;
 }
 
-const OBSERVER = new IntersectionObserver(updateAria, { threshold: 0.9 });
+const OBSERVER = new IntersectionObserver(updateAria, { threshold: 0.6 });
 
 PROJECTS.forEach((project) => {
 	OBSERVER.observe(project);
+	project.addEventListener('click', openModal);
+	// project.addEventListener('keyup', openModal);
 });
 BUTTON_LEFT.addEventListener('click', clickLeft);
 BUTTON_RIGHT.addEventListener('click', clickRight);
-// /** Esta función se llama cuando la persona hace click en el botón de enviar del formulario de contacto */
-// function showNotification() {
-// 	document.querySelector(".notification").style.display = "flex";
-// 	setTimeout(function () {
-// 		document.querySelector(".notification").style.display = "none";
-// 	}, 3000);
-// }
-
-// /** Esta función se llama cuando la persona hace click en cualquier proyecto del carousel */
-// function openModal() {
-// 	document.querySelector(".modal-container").style.display = "flex";
-// }
-
-// /** Esta función se llama para cerrar el modal */
-// function closeModal(e) {
-// 	// si el click ocurrió dentro del las imágenes del carousel o dentro del modal, no se cierra el modal
-// 	if (
-// 		e.target.className.includes("project") ||
-// 		e.target.className === "modal"
-// 	) {
-// 		return;
-// 	}
-
-// 	document.querySelector(".modal-container").style.display = "none";
-// }
-
-// /** Esta función se llama cuando la persona hace click en la fecha izquierda del carousel para navegar a la izquierda */
-//
-
-// window.onload = () => {
-// 	document
-// 		.querySelector(".arrow-right")
-// 		.addEventListener("click", clickRight);
-// 	document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-// 	document
-// 		.querySelector(".send-button")
-// 		.addEventListener("click", showNotification);
-// 	document.querySelectorAll(".project").forEach((element) => {
-// 		element.addEventListener("click", (e) => openModal(e));
-// 	});
-// 	document.body.addEventListener("click", (e) => closeModal(e));
-// };
+MODAL_CLOSE.addEventListener('click', closeModal);
+globalThis.addEventListener('click', closeModal);
+globalThis.addEventListener('keydown', listenToEsc);

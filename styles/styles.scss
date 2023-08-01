@@ -37,6 +37,9 @@
 @use "./organisms/portfolio/portfolio";
 @use "./organisms/contact/contact";
 
+// Utilities en vez de important
+@use "./utilities/visible";
+
 @media screen and (width >= 1024px) {
 	/* stylelint-disable-next-line no-invalid-position-at-import-rule */
 	@import "./desktop";
