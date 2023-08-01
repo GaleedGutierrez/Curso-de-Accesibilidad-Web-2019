@@ -2,14 +2,14 @@
 @use "../../tools/mixins";
 
 .m-modal-container {
+	@include mixins.center-flex;
+
+	/* stylelint-disable-next-line order/order */
 	position: fixed;
-	/* stylelint-disable-next-line declaration-no-important */
-	display: none !important;
+	display: none;
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(000 000 000 / 20%);
-
-	@include mixins.center-flex;
 }
 
 .m-modal {
