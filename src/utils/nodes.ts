@@ -14,3 +14,4 @@ export const IMAGE_MODAL = $('#image-modal') as HTMLImageElement;
 export const MODAL_TITLE = $('#modal-title') as HTMLHeadingElement;
 export const CONTACT_FORM = $('#contact-form') as HTMLFormElement;
 export const SUBMIT_BUTTON = $('#submit-button') as HTMLButtonElement;
+export const NOTIFICATION = $('#notification') as HTMLParagraphElement;
