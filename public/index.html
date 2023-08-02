@@ -254,7 +254,11 @@
 
 		<footer id="contact" class="g-contact">
 			<h2 class="g-contact__title">Contacto</h2>
+			<p class="g-contact__intro">
+				Podes usar el siguiente formulario para enviarme un mensaje
+			</p>
 			<form
+				id="contact-form"
 				class="g-contact__form-container o-container-medium"
 				action=""
 			>
@@ -270,6 +274,9 @@
 						required
 					/>
 				</label>
+				<!-- <p id="wrong-name" class="hidden g-contact__message-error">
+					Es necesario un nombre
+				</p> -->
 				<label for="email">
 					<p>Correo</p>
 					<input
@@ -282,6 +289,9 @@
 						required
 					/>
 				</label>
+				<!-- <p id="wrong-email" class="hidden g-contact__message-error">
+					Es necesario un email
+				</p> -->
 				<label class="message-input" for="message">
 					<p>Mensaje</p>
 					<textarea
@@ -293,7 +303,11 @@
 						required
 					></textarea>
 				</label>
+				<!-- <p id="wrong-message" class="hidden g-contact__message-error">
+					Es necesario que escribas un mensaje
+				</p> -->
 				<input
+					id="submit-button"
 					type="submit"
 					class="a-button g-contact__send-button"
 					value="Enviar"
