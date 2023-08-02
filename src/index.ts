@@ -9,9 +9,21 @@ import {
 	MODAL_CLOSE,
 	MODAL_CONTAINER,
 	MODAL_TITLE,
+	NOTIFICATION,
 	PROJECT_CONTAINER,
 	PROJECTS,
 } from './utils/nodes';
+
+function sendNotification() {
+	const TIME = 2000;
+
+	NOTIFICATION.classList.add('is-visible');
+	NOTIFICATION.innerText = 'El formulario fue enviado con éxito';
+	setTimeout(() => {
+		NOTIFICATION.classList.remove('is-visible');
+		NOTIFICATION.innerText = '';
+	}, TIME);
+}
 
 function openModal(event: Event) {
 	if (
@@ -108,8 +120,11 @@ const OBSERVER = new IntersectionObserver(updateAria, { threshold: 0.6 });
 
 CONTACT_FORM.addEventListener('submit', (event) => {
 	event.preventDefault();
+	sendNotification();
 
 	// const FORM_DATA = new FormData(CONTACT_FORM, SUBMIT_BUTTON);
+
+	CONTACT_FORM.reset();
 });
 
 // SUBMIT_BUTTON.addEventListener('click', (event) => {
