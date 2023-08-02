@@ -12,6 +12,11 @@
 		text-align: center;
 	}
 
+	&__intro {
+		color: variables.$text-color;
+		text-align: center;
+	}
+
 	&__input {
 		width: 100%;
 		padding: variables.$space-3;
@@ -36,5 +41,10 @@
 		&::placeholder {
 			color: variables.$text-color-dark;
 		}
+	}
+
+	&__message-error {
+		margin-block-end: variables.$space-5;
+		color: variables.$text-color;
 	}
 }

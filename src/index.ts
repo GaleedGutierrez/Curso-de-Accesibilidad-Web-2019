@@ -4,6 +4,7 @@ import '../styles/styles.scss';
 import {
 	BUTTON_LEFT,
 	BUTTON_RIGHT,
+	CONTACT_FORM,
 	IMAGE_MODAL,
 	MODAL_CLOSE,
 	MODAL_CONTAINER,
@@ -104,6 +105,36 @@ function clickLeft() {
 }
 
 const OBSERVER = new IntersectionObserver(updateAria, { threshold: 0.6 });
+
+CONTACT_FORM.addEventListener('submit', (event) => {
+	event.preventDefault();
+
+	// const FORM_DATA = new FormData(CONTACT_FORM, SUBMIT_BUTTON);
+});
+
+// SUBMIT_BUTTON.addEventListener('click', (event) => {
+// 	event.preventDefault();
+
+// 	let complete = true;
+// 	const FORM_DATA = new FormData(CONTACT_FORM, SUBMIT_BUTTON);
+
+// 	for (const [key, value] of FORM_DATA) {
+// 		if (value === '') {
+// 			complete = false;
+
+// 			const WRONG_MESSAGE = CONTACT_FORM.parentElement?.querySelector(
+// 				`#wrong-${key}`,
+// 			) as HTMLParagraphElement;
+
+// 			WRONG_MESSAGE.classList.add('is-visible');
+// 			WRONG_MESSAGE.focus();
+// 		}
+// 	}
+
+// 	if (!complete) {
+// 		return;
+// 	}
+// });
 
 PROJECTS.forEach((project) => {
 	OBSERVER.observe(project);
