@@ -1,5 +1,5 @@
-// import "../styles/original-styles.scss";
-import '../styles/styles.scss';
+import '@styles/styles.scss';
+import '@utils/analytics.js';
 
 import {
 	BUTTON_LEFT,
