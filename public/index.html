@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="es">
 	<head>
-		<meta charset="utf-8" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<title>Mi Portafolio</title>
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap"
-			rel="stylesheet"
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portafolio web de Juliana Gomez en donde se implementó accesibilidad web."
 		/>
+		<meta name="robots" content="index,follow" />
+		<meta
+			property="og:url"
+			content="https://galeedgutierrez.com/Curso-de-Accesibilidad-Web-2019/"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Mi Portafolio" />
+		<meta
+			property="og:description"
+			content="Portafolio web de Juliana Gomez en donde se implementó accesibilidad web"
+		/>
+		<meta property="og:title" content="Mi Portafolio" />
+		<meta
+			property="og:image"
+			content="https://drive.google.com/uc?id=1BWYiv8DJ6N8cm97wWdX1e4o2BatRB6v-"
+		/>
+		<meta property="og:locale" content="es_ES" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Mi Portafolio" />
+		<meta
+			name="twitter:description"
+			content="Portafolio web de Juliana Gomez en donde se implementó accesibilidad web"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://drive.google.com/uc?id=1BWYiv8DJ6N8cm97wWdX1e4o2BatRB6v-"
+		/>
+		<meta name="twitter:site" content="@GutierrezGaleed" />
+		<meta name="twitter:creator" content="@GutierrezGaleed" />
+		<link rel="icon" href="/assets/images/favicon.ico" type="any" />
+		<link
+			rel="icon"
+			href="/assets/images/favicon.svg"
+			type="image/svg+xml"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="/assets/images/apple-touch-icon.png"
+		/>
+		<title>Juliana Gomez</title>
 	</head>
 	<body>
 		<ul>
@@ -30,7 +70,7 @@
 		<header class="g-header">
 			<figure class="g-header__figure-hero">
 				<img
-					src="images/juliana.jpeg"
+					src="assets/images/juliana.webp"
 					alt="Juliana Gomez"
 					class="g-header__hero header-img"
 				/>
@@ -180,7 +220,7 @@
 									<figure>
 										<img
 											class="g-portfolio__img project project1"
-											src="../images/project1.png"
+											src="assets/images/project1.webp"
 											alt="Mi primer proyecto"
 										/>
 									</figure>
@@ -191,7 +231,7 @@
 									<figure>
 										<img
 											class="g-portfolio__img project project2"
-											src="../images/project2.png"
+											src="assets/images/project2.webp"
 											alt="Mi segundo proyecto"
 										/>
 									</figure>
@@ -202,7 +242,7 @@
 									<figure>
 										<img
 											class="g-portfolio__img project project3"
-											src="../images/project3.png"
+											src="assets/images/project3.webp"
 											alt="Mi tercer proyecto"
 										/>
 									</figure>
@@ -213,7 +253,7 @@
 									<figure>
 										<img
 											class="g-portfolio__img project project4"
-											src="../images/project4.png"
+											src="assets/images/project4.webp"
 											alt="Mi cuarto proyecto"
 										/>
 									</figure>
@@ -224,7 +264,7 @@
 									<figure>
 										<img
 											class="g-portfolio__img project project5"
-											src="../images/project5.png"
+											src="assets/images/project5.webp"
 											alt="Mi quinto proyecto"
 										/>
 									</figure>
@@ -326,7 +366,7 @@
 				<figure>
 					<img
 						id="image-modal"
-						src="/images/project1.png"
+						src="assets/images/project1.webp"
 						class="m-modal__image"
 						alt="Un pantallazo de mi proyecto"
 					/>
@@ -336,5 +376,26 @@
 				</button>
 			</div>
 		</dialog>
+		<script
+			defer
+			src="https://www.googletagmanager.com/gtag/js?id=G-M8H4YB694S"
+		></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "CollectionPage",
+				"name": "Mi portafolio",
+				"description": "Portafolio web de Juliana Gomez en donde se implementó accesibilidad web.",
+				"url": "https://galeedgutierrez.com/Curso-de-Accesibilidad-Web-2019/",
+				"author": {
+					"@type": "Person",
+					"name": "Galeed Gutierrez"
+				},
+				"mainContentOfPage": {
+					"@type": "WebPageElement",
+					"cssSelector": "#main"
+				}
+			}
+		</script>
 	</body>
 </html>

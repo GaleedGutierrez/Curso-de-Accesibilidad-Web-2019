@@ -13,8 +13,8 @@ const config: Configuration = {
 		static: [
 			path.join(__dirname, 'build'),
 			{
-				directory: path.join(__dirname, 'images/'),
-				publicPath: '/images',
+				directory: path.join(__dirname, 'assets/'),
+				publicPath: '/assets',
 			},
 		],
 		compress: true,
