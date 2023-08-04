@@ -12,10 +12,10 @@ const config: Configuration = {
 	devServer: {
 		static: [
 			path.join(__dirname, 'build'),
-			{
-				directory: path.join(__dirname, 'assets/'),
-				publicPath: '/assets',
-			},
+			// {
+			// 	directory: path.join(__dirname, 'assets/'),
+			// 	publicPath: '/assets',
+			// },
 		],
 		compress: true,
 		port: 8080,
