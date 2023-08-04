@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import CopyPlugin from 'copy-webpack-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -54,22 +53,22 @@ const config: Configuration = {
 				nodir: true,
 			}),
 		}),
-		new CopyPlugin({
-			patterns: [
-				// {
-				// 	from: path.resolve(__dirname, './robots.txt'),
-				// 	to: 'robots.txt',
-				// },
-				// {
-				// 	from: path.resolve(__dirname, 'CNAME'),
-				// 	to: './',
-				// },
-				{
-					from: path.resolve(__dirname, 'assets'),
-					to: 'assets',
-				},
-			],
-		}),
+		// new CopyPlugin({
+		// patterns: [
+		// {
+		// 	from: path.resolve(__dirname, './robots.txt'),
+		// 	to: 'robots.txt',
+		// },
+		// {
+		// 	from: path.resolve(__dirname, 'CNAME'),
+		// 	to: './',
+		// },
+		// {
+		// 	from: path.resolve(__dirname, 'assets'),
+		// 	to: 'assets',
+		// },
+		// ],
+		// }),
 	],
 };
 
